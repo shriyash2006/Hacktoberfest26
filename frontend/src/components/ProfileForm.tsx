@@ -26,8 +26,6 @@ export default function ProfileForm({ onUpdateStats }: ProfileFormProps) {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
-  useEffect(() => { fetchProfile(); }, []);
-
   const fetchProfile = async () => {
     try {
       const token = await getToken();
@@ -48,6 +46,8 @@ export default function ProfileForm({ onUpdateStats }: ProfileFormProps) {
     } catch (e) { console.error(e); }
     finally { setIsLoading(false); }
   };
+
+  useEffect(() => { fetchProfile(); }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
