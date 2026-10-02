@@ -1,10 +1,10 @@
 <div align="center">
 
-# REACHER
+# REACHER AI
 
 ### Research before you reach.
 
-Reacher turns a job description, a candidate profile, and a target company into a researched, reviewable outreach draft.
+Reacher AI turns a job description, a candidate profile, and a target company into a researched, reviewable outreach draft.
 
 <p>
   <a href="https://reacherpro.vercel.app/"><strong>Open the app</strong></a>
@@ -24,9 +24,9 @@ Reacher turns a job description, a candidate profile, and a target company into 
 
 ---
 
-## What Reacher does
+## What Reacher AI does
 
-Good outreach starts before the email is written. Reacher gives the message the context it needs by moving through a focused workflow:
+Good outreach starts before the email is written. Reacher AI gives the message the context it needs by moving through a focused workflow:
 
 1. Add a prospect, their contact email, and the role or job description.
 2. Analyze the role requirements.
@@ -35,9 +35,9 @@ Good outreach starts before the email is written. Reacher gives the message the 
 5. Generate a concise, personalized email.
 6. Review the draft, copy it, or save it to Gmail Drafts when your account has beta access.
 
-The product is deliberately human-in-the-loop. Reacher prepares the research and the first draft; you decide what is accurate and what is ready to send.
+The product is deliberately human-in-the-loop. Reacher AI prepares the research and the first draft; you decide what is accurate and what is ready to send.
 
-![Reacher desktop experience](./frontend/landing.png)
+![Reacher AI desktop experience](./frontend/landing.png)
 
 <div align="center">
   
@@ -48,13 +48,13 @@ The product is deliberately human-in-the-loop. Reacher prepares the research and
 | Capability | What it provides |
 | --- | --- |
 | Candidate profile | Name, contact details, headline, skills, projects, experience, education, and social links. |
-| Resume sharing | Upload a PDF and create an unguessable Reacher link that can be included in outreach. |
+| Resume sharing | Upload a PDF and create an unguessable Reacher AI link that can be included in outreach. |
 | Job description analysis | Extracts required skills, preferred skills, responsibilities, seniority, and keywords. |
 | Candidate analysis | Identifies strong matches, relevant projects, and potential gaps from the profile data. |
 | Company research | Uses web and Wikipedia search tools to find company context, product focus, and recent hooks. |
 | Outreach writing | Produces a short, direct email with a subject line and real profile links only. |
 | Draft review | Scores the email and returns tone, length, alignment, and actionable feedback. |
-| Gmail integration | Creates a Gmail draft through Clerk's Google OAuth connection. Reacher never sends the email automatically. |
+| Gmail integration | Creates a Gmail draft through Clerk's Google OAuth connection. Reacher AI never sends the email automatically. |
 | Private beta access | Everyone can explore the workflow and generate messages. Automatic Gmail draft saving is currently reserved for trusted or added beta users. |
 
 ## The outreach pipeline
@@ -269,9 +269,9 @@ Authenticated routes require a Clerk bearer session token.
 
 ## Resume links and privacy
 
-Resume uploads are stored in Appwrite. Reacher stores only resume metadata plus a SHA-256 hash of an unguessable access token in MongoDB.
+Resume uploads are stored in Appwrite. Reacher AI stores only resume metadata plus a SHA-256 hash of an unguessable access token in MongoDB.
 
-- Email recipients receive a Reacher URL, not an Appwrite storage URL.
+- Email recipients receive a Reacher AI URL, not an Appwrite storage URL.
 - The public URL serves the PDF inline and does not expose internal file IDs or API keys.
 - Replacing a resume creates a new token, which invalidates the previous link.
 - The link is intentionally public to the recipient who has it. Do not include confidential information in a resume you share externally.
@@ -279,7 +279,7 @@ Resume uploads are stored in Appwrite. Reacher stores only resume metadata plus 
 
 ## Gmail and private beta access
 
-Reacher uses Clerk's Google OAuth connection and the Gmail compose scope to create drafts. It does not send emails on the user's behalf.
+Reacher AI uses Clerk's Google OAuth connection and the Gmail compose scope to create drafts. It does not send emails on the user's behalf.
 
 During the private beta:
 
@@ -332,7 +332,7 @@ Remember to allow the deployed frontend origin in the backend CORS configuration
 - AI agents require `GEMINI_API_KEY` at runtime.
 - The background pipeline writes `pipeline_status` and `pipeline_error` fields so the dashboard can show progress and failures.
 - Empty dashboards intentionally show no fabricated prospects or mock flows.
-- Gmail draft creation can fail independently of AI generation; the generated draft remains available in Reacher when Gmail is unavailable.
+- Gmail draft creation can fail independently of AI generation; the generated draft remains available in Reacher AI when Gmail is unavailable.
 
 ## Roadmap
 
@@ -366,6 +366,6 @@ For backend changes, run the API locally and exercise the affected endpoint with
 
 Built for thoughtful outreach.
 
-REACHER - Private beta
+REACHER AI - Private beta
 
 </div>
